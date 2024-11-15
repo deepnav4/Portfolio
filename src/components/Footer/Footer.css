@@ -1,0 +1,26 @@
+div h4{
+    /* background-color: #212121; */
+    color: #aeaeae;
+    /* margin-bottom: 20px; */
+    font-size: 18px;
+}
+
+h5{
+    color: #aeaeae;
+    font-size: 12px;
+}
+
+.footer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    user-select: none;
+}
+
+body{
+    user-select: none;
+}

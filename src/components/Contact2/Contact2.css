@@ -1,0 +1,128 @@
+.cards {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-between; /* Space between cards */
+}
+
+.card-main {
+    margin-bottom: -40px;
+}
+
+.card-heading {
+    font-size: 28px;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    /* margin-left: 40px; */
+}
+
+@media (max-width:780px) {
+    .card-heading {
+        font-size: 24px;
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: 700;
+        margin-left: 0px;
+    }
+}
+
+.card {
+    position: relative;
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(34, 35, 35, 0.8);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Space below each card */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: 1px solid white;
+}
+
+.card-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Set height to cover entire card */
+    background: rgba(17, 17, 17, 1); /* Slightly transparent background */
+    color: rgba(240, 255, 255, 0.76);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateY(100%); /* Start off-screen */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.card-text h2 {
+    color: #fff;
+}
+
+/* Hover effect to show overlay */
+.card:hover .card-image {
+    transform: translateY(-50%);
+}
+
+.card:hover .card-text {
+    transform: translateY(0); /* Move into view */
+}
+
+.contact-icon {
+    height: 70px;
+    color: #fff;
+    width: 70px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 780px) {
+    .cards {
+        justify-content:center; 
+    }
+
+    .card {
+        margin-left:auto; 
+        margin-right:auto; 
+        width: 160px; 
+        height: 160px; 
+    }
+    .card-main{
+        margin-top: 30px;
+    }
+    .card-heading{
+        text-align: center;
+    }
+    .card-text h2{
+        font-size: 18px;
+    }
+    .card-text p{
+        font-size: 12px;
+    }
+    .card-text{
+        padding: 5px;
+    }
+}
