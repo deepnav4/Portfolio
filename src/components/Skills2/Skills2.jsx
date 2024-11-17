@@ -1,8 +1,8 @@
 import React from 'react';
 import "./Skills2.css";
 import skillsImg from "./expBlack.svg";
-import EarthCanvas from '../Canvas/Earth';
-import StarsCanvas from '../canvas/Stars';
+import EarthCanvas from "../canvas/Earth";
+import StarsCanvas from "../canvas/Stars";
 
 const Skills2 = () => {
   return (
