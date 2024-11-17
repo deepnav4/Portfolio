@@ -1,0 +1,5 @@
+<Link to='hero' smooth={true} offset={0} duration={500} className='innavbar' onClick={() => setActiveLink('home')}>Home</Link>
+        <Link to='about' smooth={true} offset={-150} duration={500} className='innavbar' onClick={() => setActiveLink('about')}>About</Link>
+        <Link to='skills' smooth={true} offset={-50} duration={500} className='innavbar' onClick={() => setActiveLink('skills')}>Skills</Link>
+        <Link to='projects' smooth={true} offset={-50} duration={500} className='innavbar' onClick={() => setActiveLink('projects')}>Projects</Link>
+        <Link to='contact' smooth={true} offset={-20} duration={500} className='innavbar' onClick={() => setActiveLink('contact')}>Contact</Link>

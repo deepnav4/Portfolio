@@ -1,0 +1,21 @@
+.scrollbtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #212121;
+    color: #FFFFFF;
+    border: 2px solid; /* Set initial border */
+    border-radius: 5px; /* Initial border radius */
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: all 0.3s ease; /* Ensure smooth transition for all changes */
+    width: 40px;
+    height: 40px;
+}
+
+.scrollbtn:hover {
+    background-color: azure;
+    color: #212121;
+    transform: scale(1.1);
+}
