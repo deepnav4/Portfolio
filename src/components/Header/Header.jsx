@@ -26,8 +26,9 @@ const Header = () => {
         <Link to='hero' smooth={true} offset={0} duration={500} className='innavbar' onClick={() => handleLinkClick('home')}>Home</Link>
         <Link to='about' smooth={true} offset={-150} duration={500} className='innavbar' onClick={() => handleLinkClick('about')}>About</Link>
         <Link to='skills' smooth={true} offset={-50} duration={500} className='innavbar' onClick={() => handleLinkClick('skills')}>Skills</Link>
-        <Link to='projects' smooth={true} offset={-50} duration={500} className='innavbar' onClick={() => handleLinkClick('projects')}>Projects</Link>
+        {/* <Link to='projects' smooth={true} offset={-50} duration={500} className='innavbar' onClick={() => handleLinkClick('projects')}>Projects</Link> */}
         <Link to='contact' smooth={true} offset={-20} duration={500} className='innavbar' onClick={() => handleLinkClick('contact')}>Contact</Link>
+        <a className='innavbar' target='_blank' href='https://deepnav4.github.io/Blogs'>Blogs</a>
         <div className={`animation start-${activeLink}`}></div>
       </div>
 
@@ -36,8 +37,9 @@ const Header = () => {
         <Link to='hero' smooth={true} offset={0} duration={500} className='insidebar' onClick={() => handleLinkClick('home')}>Home</Link>
         <Link to='about' smooth={true} offset={-150} duration={500} className='insidebar' onClick={() => handleLinkClick('about')}>About</Link>
         <Link to='skills' smooth={true} offset={-50} duration={500} className='insidebar' onClick={() => handleLinkClick('skills')}>Skills</Link>
-        <Link to='projects' smooth={true} offset={-50} duration={500} className='insidebar' onClick={() => handleLinkClick('projects')}>Projects</Link>
+        {/* <Link to='projects' smooth={true} offset={-50} duration={500} className='insidebar' onClick={() => handleLinkClick('projects')}>Projects</Link> */}
         <Link to='contact' smooth={true} offset={-20} duration={500} className='insidebar' onClick={() => handleLinkClick('contact')}>Contact</Link>
+        <a className='insidebar' target='_blank' href='https://deepnav4.github.io/Blogs'>Blogs</a>
       </div>
       <div className="topbar-div">
         <div className="topbar">
