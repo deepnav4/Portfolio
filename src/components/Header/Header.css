@@ -93,31 +93,50 @@ a {
     /* display: none; */
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
-    width: 200px;
-    background-color: #212121e1;
-    height: 70%;
-    border-radius: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(33, 33, 33, 0.98);
+    border-radius: 0;
     z-index: 11;
-    /* display: flex; */
-
-    /* justify-content: center; */
+    display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 30px;
-    /* margin-top: 100px; */
-    padding: 100px 0px;
-    display: none;
-    transition: all 0.3s ease;
+    gap: 50px;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
 }
 
-.insidebar{
+.insidebar {
     color: white;
-    
+    font-size: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
 }
+
+.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.open .insidebar {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.open .insidebar:nth-child(1) { transition-delay: 0.2s; }
+.open .insidebar:nth-child(2) { transition-delay: 0.3s; }
+.open .insidebar:nth-child(3) { transition-delay: 0.4s; }
+.open .insidebar:nth-child(4) { transition-delay: 0.5s; }
+.open .insidebar:nth-child(5) { transition-delay: 0.6s; }
 
 @media (max-width:780px) {
     .navbar{

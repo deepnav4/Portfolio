@@ -38,7 +38,8 @@ canvas{
     border-radius: 20px;
     transition: all 0.5s ease;
     width: calc(100% - 24px);
-    max-width: 600px; 
+    max-width: 600px;
+    position: relative; /* For legend positioning */
 }
 
 .container:hover {
@@ -46,35 +47,44 @@ canvas{
     transform: scale(1.02);
 }
 
-.container .skill-box {
+.container.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(61, 69, 177, 0.37);
+}
+
+.skill-box {
     width: 100%;
     margin: 25px 0;
 }
 
 .skill-box .title {
     display: block;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     color: white;
+    margin-bottom: 10px;
 }
 
-.skill-box .skill-bar {
+.skill-bar {
     height: 13px;
     width: 100%;
     border-radius: 6px;
-    margin-top: 6px;
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
-.skill-bar .skill-per {
+.skill-per {
     position: relative;
     display: block;
     height: 100%;
-    width: 90%; 
-    border-radius: 6px; 
-    background: linear-gradient(to right, #c27e35, #6f7d7b);
+    border-radius: 6px;
     animation: progress 0.4s ease-in-out forwards;
+    transition: width 0.5s ease-in-out;
 }
 
 .skill-per.html { width: 90%; animation-delay: 0.5s; }
@@ -86,12 +96,12 @@ canvas{
 
 @keyframes progress {
     0% {
-        width :0; 
-        opacity :1; 
+        width: 0;
+        opacity: 1;
     }
     100% {
-        opacity :1; 
-    } 
+        opacity: 1;
+    }
 }
 
 
@@ -173,5 +183,17 @@ canvas{
     canvas{
         width: 200px;
         height: 300px;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1080px) {
+    .container.glass-effect {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .skill-box {
+        margin: 15px 0;
     }
 }

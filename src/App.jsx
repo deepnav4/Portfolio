@@ -12,6 +12,7 @@ import Education from './components/Education/Education';
 // import Loader from './components/Loader/Loader';
 import Footer from './components/Footer/Footer';
 import ScrollToTopButton from './components/ScrollToTop/Scroll';
+import Spinner from './components/Spinner/Spinner';
 
 const useScrollToTop = () => {
   useEffect(() => {
@@ -19,37 +20,49 @@ const useScrollToTop = () => {
   }, []);
 };
 
+
+
 function App() {
   useScrollToTop();
-  return(
-    <div>
-      {/* <Loader/> */}
-      <Header />
-      <Hero/>
-      <div id="about"><About/> </div>
-      <Education/>
-      {/* <div>
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Match this with Spinner animation duration
+  }, []);
+
+  return (
+    <>
+      {loading && <Spinner />}
+      <div className={`app-content ${!loading ? 'show-content' : ''}`}>
+        <Header />
+        <Hero/>
+        <div id="about"><About/> </div>
+        <Education/>
+        {/* <div>
+          <div className='skills'>
+            <div className='main-skills'>
+              <Skills2/>
+            </div>
+          </div>
+        </div> */}
+        {/* <Skills/> */}
         <div className='skills'>
-          <div className='main-skills'>
+          <h2 className="skills-heading">
+            Skills
+          </h2>
+          <div className="skills-canvas">
             <Skills2/>
           </div>
         </div>
-      </div> */}
-      {/* <Skills/> */}
-      <div className='skills'>
-        <h2 className="skills-heading">
-          Skills
-        </h2>
-        <div className="skills-canvas">
-          <Skills2/>
-        </div>
+        <div id="projects"></div>
+        <Contact2/>
+        <div id="contact"><Contact/></div>
+        <Footer/>
+        <ScrollToTopButton/>
       </div>
-      <div id="projects"></div>
-      <Contact2/>
-      <div id="contact"><Contact/></div>
-      <Footer/>
-      <ScrollToTopButton/>
-    </div>
+    </>
   )
 }
 

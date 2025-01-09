@@ -5,9 +5,6 @@
 }
 
 
-body{
-  background-color:#212121;
-}
 
 html,body{
   width: 100%;
@@ -122,5 +119,15 @@ button {
 
 .skills{
   margin-top: 40px;
+}
+
+.app-content {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 100vh;
+}
+
+.app-content.show-content {
+  opacity: 1;
 }
 
