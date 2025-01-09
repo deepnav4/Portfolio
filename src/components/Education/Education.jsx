@@ -3,6 +3,30 @@ import "./Education.css";
 import educationImage from './education.svg';
 
 const Education = () => {
+<<<<<<< HEAD
+=======
+    const educationData = [
+        {
+            period: "2008-2015",
+            title: "Primary Education",
+            institution: "Dayanand Anglo Vedic Haripura, Punjab",
+            icon: "https://www.svgrepo.com/show/383227/education-cap-student-graduation-university.svg"
+        },
+        {
+            period: "2015-2024",
+            title: "Secondary Education",
+            institution: "Brahmrishi Mission School Abohar, Punjab",
+            icon: "https://www.svgrepo.com/show/383227/education-cap-student-graduation-university.svg"
+        },
+        {
+            period: "2024-Present",
+            title: "Engineering",
+            institution: "Dr. BR Ambedkar National Institute of Technology, Jalandhar, Punjab",
+            icon: "https://www.svgrepo.com/show/383227/education-cap-student-graduation-university.svg"
+        }
+    ];
+
+>>>>>>> e1cceeb (changes)
     return (
         <div className='education-upperDiv'>
             <h1>Education</h1>
@@ -11,6 +35,7 @@ const Education = () => {
                     <img src={educationImage} alt="Education" />
                 </div>
                 <div className="right-main">
+<<<<<<< HEAD
                     <div class="education-section">
                     <div class="education-card" data-aos="fade-up"data-aos-anchor-placement="bottom-bottom" >
                             <div class="icon"><img class="iicon" src="https://www.svgrepo.com/show/383227/education-cap-student-graduation-university.svg" /></div>
@@ -37,11 +62,34 @@ const Education = () => {
                             </div>
                         </div>
                         
+=======
+                    <div className="education-section">
+                        {educationData.map((edu, index) => (
+                            <div 
+                                className="education-card" 
+                                key={index}
+                                data-aos="fade-up"
+                                data-aos-anchor-placement="bottom-bottom"
+                            >
+                                <div className="icon">
+                                    <img className="iicon" src={edu.icon} alt={edu.title} />
+                                </div>
+                                <div className="content">
+                                    <h6>{edu.period}</h6>
+                                    <h4>{edu.title}</h4>
+                                    <h5>{edu.institution}</h5>
+                                </div>
+                            </div>
+                        ))}
+>>>>>>> e1cceeb (changes)
                     </div>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> e1cceeb (changes)
     )
 }
 

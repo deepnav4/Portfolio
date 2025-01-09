@@ -1,12 +1,25 @@
 /* From Uiverse.io by SchawnnahJ */ 
+<<<<<<< HEAD
 .loader {
+=======
+.canvas-loader {
+>>>>>>> e1cceeb (changes)
     position: relative;
     width: 2.5em;
     height: 2.5em;
     transform: rotate(165deg);
+<<<<<<< HEAD
 }
 
 .loader:before, .loader:after {
+=======
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-loader:before, .canvas-loader:after {
+>>>>>>> e1cceeb (changes)
     content: "";
     position: absolute;
     top: 50%;
@@ -18,16 +31,25 @@
     transform: translate(-50%, -50%);
 }
 
+<<<<<<< HEAD
 .loader:before {
     animation: before8 2s infinite;
 }
 
 .loader:after {
+=======
+.canvas-loader:before {
+    animation: before8 2s infinite;
+}
+
+.canvas-loader:after {
+>>>>>>> e1cceeb (changes)
     animation: after6 2s infinite;
 }
 
 @keyframes before8 {
     0% {
+<<<<<<< HEAD
     width: 0.5em;
     box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
     }
@@ -70,4 +92,76 @@
     position: absolute;
     top: calc(50% - 1.25em);
     left: calc(50% - 1.25em);
+=======
+        width: 0.5em;
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    35% {
+        width: 2.5em;
+        box-shadow: 0 -0.5em rgba(225, 20, 98, 0.75), 0 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    70% {
+        width: 0.5em;
+        box-shadow: -1em -0.5em rgba(225, 20, 98, 0.75), 1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+
+    100% {
+        box-shadow: 1em -0.5em rgba(225, 20, 98, 0.75), -1em 0.5em rgba(111, 202, 220, 0.75);
+    }
+}
+
+@keyframes after6 {
+    0% {
+        height: 0.5em;
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+
+    35% {
+        height: 2.5em;
+        box-shadow: 0.5em 0 rgba(61, 184, 143, 0.75), -0.5em 0 rgba(233, 169, 32, 0.75);
+    }
+
+    70% {
+        height: 0.5em;
+        box-shadow: 0.5em -1em rgba(61, 184, 143, 0.75), -0.5em 1em rgba(233, 169, 32, 0.75);
+    }
+
+    100% {
+        box-shadow: 0.5em 1em rgba(61, 184, 143, 0.75), -0.5em -1em rgba(233, 169, 32, 0.75);
+    }
+}
+
+/* Center the loader in its container */
+.canvas-loader-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Loading text style */
+.loading-text {
+    margin-top: 1rem;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 780px) {
+    .canvas-loader {
+        width: 2em;
+        height: 2em;
+    }
+    
+    .loading-text {
+        font-size: 12px;
+    }
+>>>>>>> e1cceeb (changes)
 }
